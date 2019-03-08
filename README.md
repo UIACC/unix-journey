@@ -4,7 +4,7 @@
 [1. What is UNIX?](#1-what-is-unix-?)
 
 # 1. What is UNIX?
-  - Unix is on of the first widely-used operating systems.
+  - Unix is one of the first widely-used operating systems.
 
   - Is the basis for many modern Operating systems.
 
