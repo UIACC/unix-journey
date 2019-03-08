@@ -126,7 +126,7 @@ personal computer systems.
   - creates a new file with the name [file]
   - Adjusts the timestamp of [file]
 
-- Make Directory __*(mkdir) [flags] <directory>*__ :
+- Make Directory __*(mkdir) [flags] \<directory\>*__ :
 
   - makes a new directory with the name <directory>
 
