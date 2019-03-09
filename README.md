@@ -99,7 +99,7 @@ Command [opt1] [opt2]
   - A useful variable for the strings
 
 
--  list _**(ls) [flags] <\file\>**_ :
+-  list _**(ls) [flags] <file\>**_ :
   - Lists the content of the current directory.
 
   ##### common options:
@@ -112,7 +112,7 @@ Command [opt1] [opt2]
 
   **' - ls '** => sort files by size.
 
-- change directory _**(cd) <\directory name\>**_:
+- change directory _**(cd) <directory name\>**_:
   - goes from the current directory to the specified one.
 
   - defaults to the _**home**_ directory if not given a destination.
