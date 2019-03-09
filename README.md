@@ -127,7 +127,7 @@ Command [opt1] [opt2]
   ```
 
   **absolute:**
-  the location of a file or a folder starting at /  <sub>__*(home directory)*__<sub>
+  the location of a file or a folder starting at  <sub>__*(home directory)*__<sub>
   ```shell
   cd /home/user1/csc1101
   ```
