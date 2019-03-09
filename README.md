@@ -99,7 +99,7 @@ Command [opt1] [opt2]
   - A useful variable for the strings
 
 
--  list __*(ls) [flags] <file\> *__ :
+-  list _**(ls) [flags] <\file\>**_ :
   - Lists the content of the current directory.
 
   ##### common options:
@@ -112,7 +112,7 @@ Command [opt1] [opt2]
 
   **' - ls '** => sort files by size.
 
-- change directory _**(cd) [directory name]**_:
+- change directory _**(cd) <\directory name\>**_:
   - goes from the current directory to the specified one.
 
   - defaults to the _**home**_ directory if not given a destination.
@@ -189,7 +189,7 @@ Command [opt1] [opt2]
 - Find File __(find) <starting point\> <type\> <name\>__
   - looks through any sub-directory to find a file
 
-- Locate File __\(locate) [flag] <name\> \__
+- Locate File __(locate) [flag] <name\>__
   - similar to find
   - no need to specify a starting directory (it searches the system)
 
@@ -198,8 +198,8 @@ Command [opt1] [opt2]
 
     **' - c '** => count the number of results.
 
-- current user __\(whoami)__
+- current user __(whoami)__
   - prints the name of the current user.
 
-- __\(which)__
+- __(which)__
   - used to locate the executable file associated with the given command.
