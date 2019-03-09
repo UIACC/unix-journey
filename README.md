@@ -99,7 +99,7 @@ Command [opt1] [opt2]
   - A useful variable for the strings
 
 
--  list __*(ls) [flags] <\file\> *__ :
+-  list __*(ls) [flags] <file\> *__ :
   - Lists the content of the current directory.
 
   ##### common options:
