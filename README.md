@@ -1,17 +1,29 @@
 # UNIX Journey Workshop:
 
 ### Table of Content:
-[1. What is UNIX?](#1-what-is-unix-?)
+- [1. What is UNIX?](#1-what-is-unix-?)
+- [2. History of UNIX?](#2-history-of-unix)
+- [3. UNIX Architecture](#3-unix-architecture)
+  - [3.1 Kernel](#31-kernel)
+  - [3.2 shell](#32-shell)
+  - [3.3 Programs](#33-programs)
+- [4. Why use UNIX?](#4-why-use-unix)
+- [5. UNIX File system](#5-unix-file-system)
+  - [5.1 Quick notes](#51-quick-notes)
+  - [5.2 The File system Hierarchy](#52-the-file-system-hierarchy)
+- [6. Basic commands](#6-basic-commands)
+  - [6.1 Command Structure](#61-command-structure)
+  - [6.2 Common commands](#62-common-commands)
 
 # 1. What is UNIX?
-  - Unix is one of the first widely-used operating systems.
+  - Unix is on of the first widely-used operating systems.
 
   - Is the basis for many modern Operating systems.
 
   - Helped set a standard for the multi-tasking multi-user systems
 
 # 2. History of UNIX
-- 1969 Ken Thompson, Dennis Ritchie (et al.) start working on a file
+- 1969 Ken Thompson, Dennis Ritchie start working on a file
 system, and name their system UNICS, which is later changed
 to [UNIX](https://www.youtube.com/watch?v=JoVQTPbD6UY).
 
@@ -41,7 +53,7 @@ combined in unlimited ways to perform complex custom tasks.
 
 - __It is fun!__
 
-- Not limited to preconfigured combinations or menus, as in
+- Not limited to pre-configured combinations or menus, as in
 personal computer systems.
 
 - Extremely useful computer skill that will be relevant many years from now.
@@ -74,6 +86,11 @@ personal computer systems.
 
 # 6. Basic commands:
 
+#### 6.1 Command Structure:
+Command [opt1] [opt2]
+
+#### 6.2 Common commands:
+
 - print working directory __*(pwd)*__:
   - Prints the full path of the current directory
 
@@ -82,7 +99,7 @@ personal computer systems.
   - A useful variable for the strings
 
 
--  list __*(ls) [flags] [file] *__ :
+-  list __*(ls) [flags] <\file\> *__ :
   - Lists the content of the current directory.
 
   ##### common options:
@@ -92,6 +109,8 @@ personal computer systems.
   **' - lh '** => List a detailed file/folder information.
 
   **' - a '** => list hidden files.
+
+  **' - ls '** => sort files by size.
 
 - change directory _**(cd) [directory name]**_:
   - goes from the current directory to the specified one.
@@ -122,17 +141,65 @@ personal computer systems.
 
   **' - '** => The previous directory.
 
-- Make a file __*(touch) [flag] [file]*__:
-  - creates a new file with the name [file]
-  - Adjusts the timestamp of [file]
+- Make a file __*(touch) [flag] <file\>*__:
+  - creates a new file with the name <file>
+  - Adjusts the timestamp of <file>
 
-- Make Directory __*(mkdir) [flags] \<directory\>*__ :
+- Make Directory __*(mkdir) [flags] <directory\>*__ :
 
   - makes a new directory with the name <directory>
 
   - can use relative and absolute paths to make directories outside the current directory.
 
   ##### common options:
-  **' -p '** => creates parent folders as well.
+  **' - p '** => creates parent folders as well.
 
-- Remove File __(rm) [file]__
+- Remove File __(rm) [flags] <file\>__
+  - removes the file called <file>
+  - Using wildcards you can remove multiple files.
+
+  ##### common options:
+  **' - i '** => prompt before removal.
+
+  **' - f '** => force remove.
+
+  **' - r '** => recursively remove all files in a directory.
+
+- Remove Directory __(rmdir) [flags] <directory\>__
+  - removes an empty directory <directory\>.
+  - Throws error if the directory is not empty.
+
+  ##### common options:
+    **' - p '** => removes folder and its ancestors.
+
+- Copy __(cp) [flags] <file\> <destination\>__
+  - copies <file> from location to <destination\>
+
+  - to copy multiple files you can use wildcards (such as * )
+
+- Move __(mv) [flags] <file\> <destination\>__
+  - Moves a file or directory from one place to another
+
+  - Also used for renaming, just move from <oldname\> to
+<newname\>
+
+- File type __(file) <file\>__
+  - will show you a description of the file’s contents.
+
+- Find File __(find) <starting point\> <type\> <name\>__
+  - looks through any sub-directory to find a file
+
+- Locate File __\(locate) [flag] <name\> \__
+  - similar to find
+  - no need to specify a starting directory (it searches the system)
+
+  ##### common options:
+    **' - n '** => limit the result to 20 entries.
+
+    **' - c '** => count the number of results.
+
+- current user __\(whoami)__
+  - prints the name of the current user.
+
+- __\(which)__
+  - used to locate the executable file associated with the given command.
