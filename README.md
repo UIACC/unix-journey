@@ -24,6 +24,14 @@
 - [9. Packages](#9-packages)
   - [9.1 compression](#91-compression)
   - [9.2 install Packages](#92-install-packages)
+ - [10. cut](#10-cut)
+##### to be added:
+- sort
+- unique
+- permissions
+- head/tail
+- vim text manipulation
+
 
 # 1. What is UNIX?
   - Unix is on of the first widely-used operating systems.
@@ -337,3 +345,12 @@ seem as though they are all running simultaneously.
     - "install" => installs a package
     - "remove" => removes a package
     - "show"  => shows the details of a package
+
+# 10. cut:
+- Cut on delimiter__(cut) [flag] <file name>__
+  - returns parth of the text.
+  
+    #### options:
+    - "c" => returns character
+    - "f" => returns a field
+    - "d"  => change the delimiter to break on
