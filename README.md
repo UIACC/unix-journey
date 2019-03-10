@@ -14,6 +14,16 @@
 - [6. Basic commands](#6-basic-commands)
   - [6.1 Command Structure](#61-command-structure)
   - [6.2 Common commands](#62-common-commands)
+- [7. process](#7-process)
+  - [7.1 what is a process?](#71-what-is-a-process)
+  - [7.2 what processes are running?](#72-what-processes-are-running-now)
+  - [7.3 multitasking](#73-multitasking)
+  - [7.4 kill process](#74-kill-processes)
+  - [7.5 top](#75-top)
+- [8. Jobs](#8-jobs)
+- [9. Packages](#9-packages)
+  - [9.1 compression](#91-compression)
+  - [9.2 install Packages](#92-install-packages)
 
 # 1. What is UNIX?
   - Unix is on of the first widely-used operating systems.
@@ -203,3 +213,127 @@ Command [opt1] [opt2]
 
 - __(which)__
   - used to locate the executable file associated with the given command.
+
+
+# 7. Process
+### 7.1 What is a process?
+- An instance of a running program.
+
+- More specific than a program
+
+- Each process is given a unique id (PID)
+
+### 7.2 What processes are running now?
+- process screenshot __(ps) [flags]__
+  - Reports a snapshot of the current running processes, including
+PIDs
+  - Lists the processes created by the user in the current terminal
+
+  ##### common options:
+    **' - e '** => every process currently running.
+
+    **' - u user'** => processes created by this user.
+
+### 7.3 Multitasking
+- Quick switching back and forth between processes makes it
+seem as though they are all running simultaneously.
+
+- Each process has a priority that can be set and changed by the user.
+
+- priorities range from -20(highest) to 19(lowest), if process is started with out a priority defaults to 0
+
+- nice process __(nice) [flags] <command\>__
+  - starts a process with the set priority.
+
+  - if priority is not set default is 10
+
+  - only root user can set priority below 0
+
+
+  ##### common options:
+  **' - n '** => priority.
+
+
+- renice process __(renice) [flags] <PID\>__
+  - changes the priority of a running process.
+
+  - can change the processes created by this user only
+
+  - only root user can set priority below 0
+  ##### common options:
+  **' - n '** => priority.
+
+### 7.4 Kill processes
+- kill process __(kill) <PID\>__
+  - Kills the process with this ID.
+
+- kill all processes __(killall) [flag] <Process name\>__
+  - Kills all the processes of the current program.
+
+  ##### common options:
+
+  **' - TERM '** => Terminates execution (default).
+
+  **' - HUP '** => Hang-up (restarts the program).
+
+  **' - KILL '** => Like bleach, can kill anything.
+
+### 7.5 TOP
+- running processes __(top)__
+  - All in one stop for process management
+
+##### common options:
+
+**' h '** => Help menu.
+**' Z '** => Set colors.
+**' k/K '** => Kill a Process.
+**' r '** => renice.
+
+# 8. Jobs
+- Check jobs __(jobs)__
+- Prints the current jobs with details and job id.
+
+- resume job __(bg) <ID\>__
+  - Restart a stopped background process.
+
+- foreground __(fg) <ID\>__
+  - Bring a background process to the foreground.
+
+- kill job __(kill) %<ID\>__
+  - kills the job with the given id.
+
+# 9. Packages
+
+### 9.1 Compression
+- compress file __(gzip) <file\>__
+  - can compress a single file.
+  -  doesn't create a new compressed file
+  - compresses the file into a ".gz" archive.
+
+- decompress file __(gunzip) <file\>__
+  - decompresses the file.
+
+- compress file __(tar) cvf <file name\> <source file\>__
+  - compress as full directories.
+  - creates a new copy that is compressed.
+  - compresses the file into a ".tar" archive.
+
+  - "c" => create
+  - "v" => verbose / show progress
+  - "f" => file name
+
+- decompress file  __(tar) xvf <file\>__
+  - decompresses the file.
+
+  - "x" => extract
+  - "v" => verbose / show progress
+  - "f" => file name
+
+### 9.2 install packages
+- Debian package management __(apt) [option] <package name>__
+  - manages the packages on the device.
+
+  #### options:
+    - "install" => installs a package
+    - "remove" => removes a package
+    - "show"  => shows the details of a package
